@@ -1,0 +1,2 @@
+JavaScript is the Programming language which allows humans to communicate between computers and us.
+It is used in web development for doing front end and backend itself and js is very easy for us to learn. 
