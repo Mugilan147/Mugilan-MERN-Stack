@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM cat and Bulb</title>
+</head>
+
+<body class="bg-black">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <section>
+        <div class="flex flex-col justify-center items-center">
+            <img src="./bulb-on.webp" alt="bulb on" id="bulb on" class="h-36">
+            <img src="./cat-on.webp" alt="Cat img" id="Cat img" class="h-36">
+        </div>
+        <div class="2xl:container mx-auto">
+            <div class="w-[30%] mx-auto grid grid-cols-1 p-5 mt-4 border border-white rounded-2xl bg-orange-800 border-solid">
+                <div class="text-white flex flex-row justify-center items-center p-7 font-semibold leading-7 text-3xl" id="Switching">
+                    Switched On</div>
+                <div class="flex flex-row justify-center items-center gap-4">
+                    <button class="text-white border border-green-500 p-2 rounded-2xl" id="on">On</button>
+                    <button class="text-white border border-red-500 p-2 rounded-2xl" id="off">Off</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const bulb = document.getElementById("bulb on");
+        const cat = document.getElementById("Cat img");
+
+        const content = document.getElementById("Switching");
+        const poweron = document.getElementById("on");
+        const poweroff = document.getElementById("off");
+
+        poweroff.addEventListener("click",() => {
+            bulb.src = "https://ik.imagekit.io/g3noxl5cd/MERN%20Stack/Cat%20and%20Bulb/bulb-off.webp"
+            cat.src = "https://ik.imagekit.io/g3noxl5cd/MERN%20Stack/Cat%20and%20Bulb/cat-eyes.webp"
+            content.textContent = "Switched Off"
+            poweroff.style.backgroundColor = "Red"
+            poweron.style.backgroundColor = "transparent"
+        })
+
+        poweron.addEventListener("click", () => {
+            bulb.src = "https://ik.imagekit.io/g3noxl5cd/MERN%20Stack/Cat%20and%20Bulb/bulb-on.webp"
+            cat.src = "https://ik.imagekit.io/g3noxl5cd/MERN%20Stack/Cat%20and%20Bulb/cat-on.webp"
+            content.textContent = "Switched On"
+            poweron.style.backgroundColor = "green"
+            poweroff.style.backgroundColor = "transparent"
+
+        })
+    </script>
+</body>
+
+</html>
